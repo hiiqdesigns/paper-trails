@@ -6,13 +6,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <Navbar />
 
-      <section className="w-full bg-white dark:bg-gray-900">
+      <section className="w-full bg-transparent">
         <div className="container px-6 py-16 mx-auto text-center">
           <div className="max-w-lg mx-auto">
-            <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
+            <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">
               Building Your Next App with our Awesome components
             </h1>
-            <p className="mt-6 text-gray-500 dark:text-gray-300">
+            <p className="mt-6 text-gray-500">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
               similique obcaecati illum mollitia.
             </p>

@@ -25,7 +25,7 @@ export const Navbar = () => {
             <button
               x-cloak
               type="button"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
               aria-label="toggle menu"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -69,24 +69,24 @@ export const Navbar = () => {
             isOpen
               ? "translate-x-[0%] opacity-100 "
               : "-translate-x-full md:translate-x-[0%] opacity-0 md:opacity-100 "
-          }absolute md:relative inset-x-0 z-20 w-full px-16 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:flex md:items-center md:justify-between`}
+          }absolute md:relative inset-x-0 z-20 w-full px-16 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:flex md:items-center md:justify-between`}
         >
           <div className="flex flex-col md:flex-row">
             <Link
               href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2"
+              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
             >
               Home
             </Link>
             <Link
               href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2"
+              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
             >
               About
             </Link>
             <Link
               href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2"
+              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
             >
               Contact
             </Link>
@@ -111,7 +111,7 @@ export const Navbar = () => {
 
             <input
               type="text"
-              className="w-full pl-10 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+              className="w-full pl-10 py-2 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
               placeholder="Search"
             />
           </div>
