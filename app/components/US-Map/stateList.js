@@ -4,6 +4,7 @@ import Arizona from "./States/Arizona";
 import Arkansas from "./States/Arkansas";
 import California from "./States/California";
 import Colorado from "./States/Colorado";
+import Connecticut from "./States/Connecticut";
 import Delaware from "./States/Delaware";
 import Florida from "./States/Florida";
 import Georgia from "./States/Georgia";
@@ -43,6 +44,10 @@ import Texas from "./States/Texas";
 import Utah from "./States/Utah";
 import Vermont from "./States/Vermont";
 import Virgina from "./States/Virgina";
+import Washington from "./States/Washington";
+import WestVirgina from "./States/WestVirgina";
+import Wisconsin from "./States/Wisconsin";
+import Wyoming from "./States/Wyoming";
 
 export const stateList = [
   { id: "AL", name: "Alabama", component: <Alabama key={"state-AL"} /> },
@@ -55,6 +60,11 @@ export const stateList = [
     component: <California key={"state-CA"} />,
   },
   { id: "CO", name: "Colorado", component: <Colorado key={"state-CO"} /> },
+  {
+    id: "CT",
+    name: "Connecticut",
+    component: <Connecticut key={"state-CT"} />,
+  },
   { id: "DE", name: "Delaware", component: <Delaware key={"state-DE"} /> },
   { id: "FL", name: "Florida", component: <Florida key={"state-FL"} /> },
   { id: "GA", name: "Georgia", component: <Georgia key={"state-GA"} /> },
@@ -130,4 +140,12 @@ export const stateList = [
   { id: "UT", name: "Utah", component: <Utah key={"state-UT"} /> },
   { id: "VT", name: "Vermont", component: <Vermont key={"state-VT"} /> },
   { id: "VA", name: "Virginia", component: <Virgina key={"state-VA"} /> },
+  { id: "WA", name: "Washington", component: <Washington key={"state-WA"} /> },
+  {
+    id: "WV",
+    name: "West Virginia",
+    component: <WestVirgina key={"state-MV"} />,
+  },
+  { id: "WI", name: "Wisconsin", component: <Wisconsin key={"state-WI"} /> },
+  { id: "WY", name: "Wyoming", component: <Wyoming key={"state-WY"} /> },
 ];
