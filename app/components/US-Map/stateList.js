@@ -33,6 +33,11 @@ import NorthCarolina from "./States/NorthCarolina";
 import NorthDakota from "./States/NorthDakota";
 import Ohio from "./States/Ohio";
 import Oklahoma from "./States/Oklahoma";
+import Oregon from "./States/Oregon";
+import Pennsylvania from "./States/Pennsylvania";
+import RhodeIsland from "./States/RhodeIsland";
+import SouthCarolina from "./States/SouthCarolina";
+import SouthDakota from "./States/SouthDakota";
 
 export const stateList = [
   { id: "AL", name: "Alabama", component: <Alabama key={"state-AL"} /> },
@@ -94,4 +99,25 @@ export const stateList = [
   },
   { id: "OH", name: "Ohio", component: <Ohio key={"state-OH"} /> },
   { id: "OK", name: "Oklahoma", component: <Oklahoma key={"state-OK"} /> },
+  { id: "OR", name: "Oregon", component: <Oregon key={"state-OR"} /> },
+  {
+    id: "PA",
+    name: "Pennsylvania",
+    component: <Pennsylvania key={"state-PA"} />,
+  },
+  {
+    id: "RI",
+    name: "Rhode Island",
+    component: <RhodeIsland key={"state-RI"} />,
+  },
+  {
+    id: "SC",
+    name: "South Carolina",
+    component: <SouthCarolina key={"state-SC"} />,
+  },
+  {
+    id: "SD",
+    name: "South Dakota",
+    component: <SouthDakota key={"state-SD"} />,
+  },
 ];
