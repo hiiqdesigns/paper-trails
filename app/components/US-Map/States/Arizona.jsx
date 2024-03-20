@@ -1,4 +1,6 @@
-export const Arizona = () => {
+import React from "react";
+
+const Arizona = () => {
   return (
     <g id="AZ">
       <title>Arizona</title>
@@ -6,3 +8,5 @@ export const Arizona = () => {
     </g>
   );
 };
+
+export default Arizona;
