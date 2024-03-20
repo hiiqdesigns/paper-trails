@@ -24,10 +24,15 @@ import Mississippi from "./States/Mississippi";
 import Missouri from "./States/Missouri";
 import Montana from "./States/Montana";
 import Nebraska from "./States/Nebraska";
+import Nevada from "./States/Nevada";
 import NewHampshire from "./States/NewHampshire";
 import NewJersey from "./States/NewJersey";
+import NewMexico from "./States/NewMexico";
+import NewYork from "./States/NewYork";
 import NorthCarolina from "./States/NorthCarolina";
 import NorthDakota from "./States/NorthDakota";
+import Ohio from "./States/Ohio";
+import Oklahoma from "./States/Oklahoma";
 
 export const stateList = [
   { id: "AL", name: "Alabama", component: <Alabama key={"state-AL"} /> },
@@ -68,12 +73,15 @@ export const stateList = [
   { id: "MO", name: "Missouri", component: <Missouri key={"state-MO"} /> },
   { id: "MT", name: "Montana", component: <Montana key={"state-MT"} /> },
   { id: "NE", name: "Nebraska", component: <Nebraska key={"state-NE"} /> },
+  { id: "NV", name: "Nevada", component: <Nevada key={"state-NV"} /> },
   {
     id: "NH",
     name: "New Hampshire",
     component: <NewHampshire key={"state-NH"} />,
   },
   { id: "NJ", name: "New Jersey", component: <NewJersey key={"state-NJ"} /> },
+  { id: "NM", name: "New Mexico", component: <NewMexico key={"state-NM"} /> },
+  { id: "NY", name: "New York", component: <NewYork key={"state-NY"} /> },
   {
     id: "NC",
     name: "North Carolina",
@@ -84,4 +92,6 @@ export const stateList = [
     name: "North Dakota",
     component: <NorthDakota key={"state-ND"} />,
   },
+  { id: "OH", name: "Ohio", component: <Ohio key={"state-OH"} /> },
+  { id: "OK", name: "Oklahoma", component: <Oklahoma key={"state-OK"} /> },
 ];
