@@ -38,6 +38,11 @@ import Pennsylvania from "./States/Pennsylvania";
 import RhodeIsland from "./States/RhodeIsland";
 import SouthCarolina from "./States/SouthCarolina";
 import SouthDakota from "./States/SouthDakota";
+import Tennessee from "./States/Tennessee";
+import Texas from "./States/Texas";
+import Utah from "./States/Utah";
+import Vermont from "./States/Vermont";
+import Virgina from "./States/Virgina";
 
 export const stateList = [
   { id: "AL", name: "Alabama", component: <Alabama key={"state-AL"} /> },
@@ -120,4 +125,9 @@ export const stateList = [
     name: "South Dakota",
     component: <SouthDakota key={"state-SD"} />,
   },
+  { id: "TN", name: "Tennessee", component: <Tennessee key={"state-TN"} /> },
+  { id: "TX", name: "Texas", component: <Texas key={"state-TX"} /> },
+  { id: "UT", name: "Utah", component: <Utah key={"state-UT"} /> },
+  { id: "VT", name: "Vermont", component: <Vermont key={"state-VT"} /> },
+  { id: "VA", name: "Virginia", component: <Virgina key={"state-VA"} /> },
 ];
