@@ -23,7 +23,6 @@ export const Navbar = () => {
           {/* <!-- Mobile menu button --> */}
           <div className="flex md:hidden">
             <button
-              x-cloak
               type="button"
               className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
               aria-label="toggle menu"
@@ -35,11 +34,11 @@ export const Navbar = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M4 8h16M4 16h16"
                 />
               </svg>
@@ -50,11 +49,11 @@ export const Navbar = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -64,7 +63,6 @@ export const Navbar = () => {
 
         {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
         <div
-          x-cloak
           className={`${
             isOpen
               ? "translate-x-[0%] opacity-100 "
@@ -102,9 +100,9 @@ export const Navbar = () => {
                 <path
                   d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></path>
               </svg>
             </span>
