@@ -18,6 +18,11 @@ import Louisiana from "./States/Louisiana";
 import Maine from "./States/Maine";
 import Maryland from "./States/Maryland";
 import Massachusetts from "./States/Massachusetts";
+import Michigan from "./States/Michigan";
+import Minnesota from "./States/Minnesota";
+import Mississippi from "./States/Mississippi";
+import Missouri from "./States/Missouri";
+import Montana from "./States/Montana";
 
 export const stateList = [
   { id: "AL", name: "Alabama", component: <Alabama key={"state-AL"} /> },
@@ -48,4 +53,13 @@ export const stateList = [
     name: "Massachusetts",
     component: <Massachusetts key={"state-MA"} />,
   },
+  { id: "MI", name: "Michigan", component: <Michigan key={"state-MI"} /> },
+  { id: "MN", name: "Minnesota", component: <Minnesota key={"state-MN"} /> },
+  {
+    id: "MS",
+    name: "Mississippi",
+    component: <Mississippi key={"state-MS"} />,
+  },
+  { id: "MO", name: "Missouri", component: <Missouri key={"state-MO"} /> },
+  { id: "MT", name: "Montana", component: <Montana key={"state-MT"} /> },
 ];
