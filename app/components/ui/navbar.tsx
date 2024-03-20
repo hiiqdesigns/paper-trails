@@ -7,7 +7,11 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative w-full px-16 bg-white shadow dark:bg-gray-800">
+    <nav
+      className={`relative w-full px-16 shadow${
+        isOpen ? " bg-white md:bg-transparent" : " bg-transparent"
+      }`}
+    >
       <div className="w-full lg:max-w-screen-xl py-3 mx-auto md:flex">
         <div className="flex items-center justify-between">
           <Link href={`/`}>
@@ -67,7 +71,7 @@ export const Navbar = () => {
             isOpen
               ? "translate-x-[0%] opacity-100 "
               : "-translate-x-full md:translate-x-[0%] opacity-0 md:opacity-100 "
-          }absolute md:relative inset-x-0 z-20 w-full px-16 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:flex md:items-center md:justify-between`}
+          }absolute md:relative top-full inset-x-0 z-20 w-full px-16 py-4 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:flex md:items-center md:justify-between bg-white md:bg-transparent shadow md:shadow-none`}
         >
           <div className="flex flex-col md:flex-row">
             <Link
