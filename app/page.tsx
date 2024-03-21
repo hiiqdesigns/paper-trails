@@ -1,12 +1,8 @@
-import Image from "next/image";
-import { Navbar } from "./components/ui/navbar";
 import { USMap } from "./components/US-Map";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Navbar />
-
       <section className="w-full bg-transparent">
         <div className="container px-6 py-16 mx-auto text-center">
           <div className="max-w-lg mx-auto">
