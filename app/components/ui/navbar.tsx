@@ -73,22 +73,24 @@ export const Navbar = () => {
               : "-translate-x-full md:translate-x-[0%] opacity-0 md:opacity-100 "
           }absolute md:relative top-full inset-x-0 z-20 w-full px-16 py-4 transition-all duration-300 ease-in-out md:mt-0 md:p-0 md:top-0 md:flex md:items-center md:justify-between bg-white md:bg-transparent shadow md:shadow-none`}
         >
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row md:ml-2">
             <Link
               href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
+              className="py-2 px-4 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100"
             >
               Home
             </Link>
+
             <Link
-              href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
+              href={`/about`}
+              className="py-2 px-4 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100"
             >
               About
             </Link>
+
             <Link
-              href={`/`}
-              className="py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 md:mx-2"
+              href={`/contact`}
+              className="py-2 px-4 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-gray-100"
             >
               Contact
             </Link>
