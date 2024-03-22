@@ -19,7 +19,7 @@ export const USMap = () => {
         return (
           <g
             key={`${state.id}-${state.name}`}
-            onClick={() => router.push(`/${state.name}`)}
+            onClick={() => router.push(`/states/${state.id.toLowerCase()}`)}
             className={`hover:cursor-pointer stroke-black stroke-[0.125px] fill-slate-200 ${hoverColor}`}
           >
             {state.component()}
