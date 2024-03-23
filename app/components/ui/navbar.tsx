@@ -8,11 +8,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`relative w-full px-16 shadow${
+      className={`relative shadow${
         isOpen ? " bg-white md:bg-transparent" : " bg-transparent"
       }`}
     >
-      <div className="w-full lg:max-w-screen-xl py-3 mx-auto md:flex">
+      <div className="container px-8 py-3 mx-auto md:flex">
         <div className="flex items-center justify-between">
           <Link href={`/`}>
             <Image
