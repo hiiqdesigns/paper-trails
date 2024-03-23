@@ -1,14 +1,5 @@
-const openSecretsAPIKey = process.env.OPENSECRETS_API_KEY;
-
-async function getData(state: string) {
-  const res = await fetch(
-    `https://www.opensecrets.org/api/?method=getLegislators&id=${state}&apikey=${openSecretsAPIKey}&output=json`
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
+import getLegisData from "@/utils/getOpenSecretsData.js";
+import { stateList } from "@/app/components/US-Map/stateList";
 
 export default async function State({
   params,
@@ -18,7 +9,7 @@ export default async function State({
   };
 }) {
   const { id } = params;
-  const data = await getData(id);
+  const data = await getLegisData(id);
   const legislatorsList = data.response.legislator;
 
   return (
