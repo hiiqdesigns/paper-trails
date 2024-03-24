@@ -11,10 +11,11 @@ export default async function State({
   const { id } = params;
   const data = await getLegisData(id);
   const legislatorsList = data.response.legislator;
+  const currentState = stateList.find((state) => state.id.toLowerCase() == id);
 
   return (
     <main className="flex flex-col items-center min-h-screen">
-      <section className="w-full max-w-screen-xl">
+      <section className="container px-8">
         {params.id}
         <br />
         Welcome to the {params.id} page!
