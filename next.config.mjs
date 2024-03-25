@@ -8,6 +8,12 @@ const nextConfig = {
         // port: '',
         // pathname: '/account123/**',
       },
+      {
+        protocol: "https",
+        hostname: "cdn1.opensecrets.org",
+        // port: '',
+        // pathname: '/account123/**',
+      },
     ],
   },
 };
