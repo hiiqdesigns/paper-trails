@@ -1,6 +1,4 @@
-import Image from "next/image";
-import { getCandData } from "@/utils/getOpenSecretsData";
-import Link from "next/link";
+import CandidateTableRow from "./CandidateTableRow";
 
 export default function CandidateTable({
   stateName,
