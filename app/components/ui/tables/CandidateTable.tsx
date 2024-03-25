@@ -2,16 +2,10 @@ import Image from "next/image";
 import { getCandData } from "@/utils/getOpenSecretsData";
 import Link from "next/link";
 
-import twitter from "/public/twitter.svg";
-import youtube from "/public/youtube.svg";
-import facebook from "/public/facebook.svg";
-
-export default async function CandidateTable({
-  stateId,
+export default function CandidateTable({
   stateName,
   stateList,
 }: {
-  stateId: string | undefined;
   stateName: string | undefined;
   stateList: Array<any>;
 }) {

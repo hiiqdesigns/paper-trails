@@ -17,11 +17,7 @@ export default async function State({
   return (
     <main className="flex flex-col items-center min-h-screen">
       <section className="container px-8">
-        {params.id}
-        <br />
-        Welcome to the {params.id} page!
         <CandidateTable
-          stateId={currentState?.id}
           stateName={currentState?.name}
           stateList={legislatorsList}
         />
