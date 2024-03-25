@@ -5,6 +5,9 @@ import { getCandData } from "@/utils/getOpenSecretsData";
 import twitter from "/public/twitter.svg";
 import youtube from "/public/youtube.svg";
 import facebook from "/public/facebook.svg";
+import blueUserIcon from "/public/blue-user-icon.png";
+import redUserIcon from "/public/red-user-icon.png";
+import userIcon from "/public/user-icon.png";
 
 export default async function CandidateTableRow({
   stateId,
@@ -36,6 +39,9 @@ export default async function CandidateTableRow({
   const candData = cand.response.summary["@attributes"];
   const { chamber, total, source, party } = candData;
 
+  const imageLink = `https://cdn1.opensecrets.org/congress-members/photos/${cid}.jpg`;
+  const image = await fetch(imageLink);
+
   return (
     <tr>
       <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
@@ -45,7 +51,15 @@ export default async function CandidateTableRow({
               width={120}
               height={120}
               className="object-cover w-16 h-16 rounded-full"
-              src={`https://cdn1.opensecrets.org/congress-members/photos/${cid}.jpg`}
+              src={
+                image.ok
+                  ? imageLink
+                  : party == "D"
+                  ? blueUserIcon
+                  : party == "R"
+                  ? redUserIcon
+                  : userIcon
+              }
               alt=""
             />
 
