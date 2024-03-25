@@ -26,7 +26,7 @@ export default function CandidateTable({
               <table className="min-w-full divide-y divide-gray-200">
                 {/* Candidate Data Table Header */}
                 <thead>
-                  <tr>
+                  <tr className="align-top">
                     <th
                       scope="col"
                       className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"
@@ -75,7 +75,7 @@ export default function CandidateTable({
                       scope="col"
                       className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
                     >
-                      Total Contributions
+                      Total Contributions Received YTD
                     </th>
 
                     <th
