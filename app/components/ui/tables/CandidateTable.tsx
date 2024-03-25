@@ -9,20 +9,6 @@ export default function CandidateTable({
   stateName: string | undefined;
   stateList: Array<any>;
 }) {
-  const cand = await getCandData("N00027860");
-  const candData = cand.response.summary["@attributes"];
-
-  const candLegisData = stateList.find(
-    (state) => state["@attributes"].cid == candData.cid
-  )?.["@attributes"];
-
-  console.log(candData, candLegisData);
-
-  const USDollar = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
-
   return (
     <section className="container mx-auto">
       <div className="flex items-center gap-x-3">
@@ -103,100 +89,17 @@ export default function CandidateTable({
 
                 {/* Candidate Data Table */}
                 <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-                      <div className="inline-flex items-center gap-x-3">
-                        <div className="flex items-center gap-x-2">
-                          <Image
-                            width={120}
-                            height={120}
-                            className="object-cover w-16 h-16 rounded-full"
-                            src={`https://cdn1.opensecrets.org/congress-members/photos/${candData.cid}.jpg`}
-                            alt=""
-                          />
-                          <div>
-                            <h2 className="font-medium text-gray-800">
-                              {candData.cand_name}
-                            </h2>
-                            <Link
-                              href={`/states/${stateId?.toLowerCase()}/${
-                                candLegisData.cid
-                              }`}
-                            >
-                              <span className="text-sm font-normal text-gray-600">
-                                See More...
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-                      <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60">
-                        <h2 className="text-sm font-normal text-emerald-500">
-                          {candData.chamber == "H"
-                            ? "House of Representatives"
-                            : candData.chamber == "S"
-                            ? "Senate"
-                            : ""}
-                        </h2>
-                      </div>
-                    </td>
+                  {stateList &&
+                    stateList.map((candidate) => {
+                      const candLegisData = candidate["@attributes"];
 
-                    <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">
-                      {USDollar.format(candData.total)}
-                    </td>
-
-                    <td className="px-4 py-4 text-sm whitespace-nowrap">
-                      <div className="flex items-center gap-x-2">
-                        <Link href={`tel:${candLegisData.phone}`}>
-                          <button className="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60">
-                            Phone
-                          </button>
-                        </Link>
-
-                        <Link href={`${candLegisData.webform}`} target="_blank">
-                          <button className="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60">
-                            Contact Form
-                          </button>
-                        </Link>
-
-                        <Link href={`${candLegisData.website}`} target="_blank">
-                          <button className="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60">
-                            Website
-                          </button>
-                        </Link>
-                      </div>
-                    </td>
-
-                    <td className="px-4 py-4 text-sm whitespace-nowrap">
-                      <div className="flex items-center gap-x-6">
-                        <Link
-                          href={`https://twitter.com/${candLegisData["twitter_id"]}`}
-                          target="_blank"
-                          className="focus:outline-none"
-                        >
-                          <Image src={twitter} alt="" width={32} height={32} />
-                        </Link>
-
-                        <Link
-                          href={candLegisData["youtube_url"]}
-                          target="_blank"
-                          className="focus:outline-none"
-                        >
-                          <Image src={youtube} alt="" width={32} height={32} />
-                        </Link>
-
-                        <Link
-                          href={`https://www.facebook.com/${candLegisData["facebook_id"]}`}
-                          target="_blank"
-                          className="focus:outline-none"
-                        >
-                          <Image src={facebook} alt="" width={32} height={32} />
-                        </Link>
-                      </div>
-                    </td>
-                  </tr>
+                      return (
+                        <CandidateTableRow
+                          key={candLegisData.cid}
+                          {...candLegisData}
+                        />
+                      );
+                    })}
                 </tbody>
               </table>
             </div>
