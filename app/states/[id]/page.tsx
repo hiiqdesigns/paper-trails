@@ -1,3 +1,4 @@
+import CandidateTable from "@/app/components/ui/tables/CandidateTable";
 import getLegisData from "@/utils/getOpenSecretsData.js";
 import { stateList } from "@/app/components/US-Map/stateList";
 
@@ -19,15 +20,11 @@ export default async function State({
         {params.id}
         <br />
         Welcome to the {params.id} page!
-        <ul>
-          {legislatorsList.map((legislator: any) => {
-            return (
-              <li key={legislator["@attributes"].cid}>
-                <span>{legislator["@attributes"].firstlast}</span>
-              </li>
-            );
-          })}
-        </ul>
+        <CandidateTable
+          stateId={currentState?.id}
+          stateName={currentState?.name}
+          stateList={legislatorsList}
+        />
       </section>
     </main>
   );
