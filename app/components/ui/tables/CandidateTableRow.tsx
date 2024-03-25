@@ -107,7 +107,7 @@ export default async function CandidateTableRow({
             target="_blank"
             className="focus:outline-none"
           >
-            <Image src={twitter} alt="" width={32} height={32} />
+            <Image src={twitter} alt="" width={40} height={40} />
           </Link>
 
           <Link
@@ -115,7 +115,7 @@ export default async function CandidateTableRow({
             target="_blank"
             className="focus:outline-none"
           >
-            <Image src={youtube} alt="" width={32} height={32} />
+            <Image src={youtube} alt="" width={40} height={40} />
           </Link>
 
           <Link
@@ -123,7 +123,7 @@ export default async function CandidateTableRow({
             target="_blank"
             className="focus:outline-none"
           >
-            <Image src={facebook} alt="" width={32} height={32} />
+            <Image src={facebook} alt="" width={40} height={40} />
           </Link>
         </div>
       </td>
