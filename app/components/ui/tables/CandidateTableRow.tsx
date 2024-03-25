@@ -79,7 +79,7 @@ export default async function CandidateTableRow({
       </td>
 
       <td className="px-4 py-4 text-sm whitespace-nowrap">
-        <div className="flex items-center gap-x-2">
+        <div className="flex items-center gap-x-2 child-hover:scale-105">
           <Link href={`tel:${phone}`}>
             <button className="px-3 py-1 text-xs text-[#D00037] rounded-full bg-[#D00037]/10">
               Phone
@@ -101,7 +101,7 @@ export default async function CandidateTableRow({
       </td>
 
       <td className="px-4 py-4 text-sm whitespace-nowrap">
-        <div className="flex items-center gap-x-6">
+        <div className="flex items-center gap-x-6 child-hover:scale-125">
           <Link
             href={`https://twitter.com/${twitter_id}`}
             target="_blank"
