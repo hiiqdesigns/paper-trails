@@ -27,7 +27,7 @@ export default function CandidateTable({
                   <tr className="align-top">
                     <th
                       scope="col"
-                      className="py-4 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"
+                      className="py-4 pl-4 pr-12 text-sm font-normal text-left rtl:text-right text-gray-500"
                     >
                       <div className="flex items-center gap-x-3">
                         <span className="ml-[4.5rem]">Name</span>
@@ -36,7 +36,7 @@ export default function CandidateTable({
 
                     <th
                       scope="col"
-                      className="px-12 py-4 text-sm font-normal text-left text-gray-500"
+                      className="px-4 py-4 text-sm font-normal text-left text-gray-500"
                     >
                       <button className="flex items-center gap-x-2">
                         <span>Chamber</span>

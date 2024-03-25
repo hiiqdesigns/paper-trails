@@ -44,7 +44,7 @@ export default async function CandidateTableRow({
 
   return (
     <tr>
-      <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+      <td className="pl-4 pr-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
         <div className="inline-flex items-center gap-x-3">
           <div className="flex items-center gap-x-2">
             <Image
@@ -76,7 +76,7 @@ export default async function CandidateTableRow({
         </div>
       </td>
 
-      <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+      <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
         <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60">
           <h2 className="text-sm font-normal text-emerald-500">
             {chamber == "H" || chamber == ""
