@@ -81,19 +81,19 @@ export default async function CandidateTableRow({
       <td className="px-4 py-4 text-sm whitespace-nowrap">
         <div className="flex items-center gap-x-2">
           <Link href={`tel:${phone}`}>
-            <button className="px-3 py-1 text-xs text-indigo-500 rounded-full bg-indigo-100/60">
+            <button className="px-3 py-1 text-xs text-[#D00037] rounded-full bg-[#D00037]/10">
               Phone
             </button>
           </Link>
 
           <Link href={`${webform}`} target="_blank">
-            <button className="px-3 py-1 text-xs text-blue-500 rounded-full bg-blue-100/60">
+            <button className="px-3 py-1 text-xs text-[#0048A0] rounded-full bg-[#0048A0]/10">
               Contact Form
             </button>
           </Link>
 
           <Link href={`${website}`} target="_blank">
-            <button className="px-3 py-1 text-xs text-pink-500 rounded-full bg-pink-100/60">
+            <button className="px-3 py-1 text-xs text-[#68246C] rounded-full bg-[#68246C]/10">
               Website
             </button>
           </Link>
