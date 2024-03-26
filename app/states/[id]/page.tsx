@@ -16,7 +16,7 @@ export default async function State({
 
   return (
     <main className="flex flex-col items-center min-h-screen">
-      <section className="container px-8">
+      <section className="container px-8 py-6 md:py-12">
         <CandidateTable
           stateName={currentState?.name}
           stateList={legislatorsList}

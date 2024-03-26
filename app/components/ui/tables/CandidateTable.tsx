@@ -18,9 +18,9 @@ export default function CandidateTable({
       </div>
 
       <div className="flex flex-col mt-6">
-        <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div className="overflow-x-auto -my-2 md:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-            <div className="overflow-hidden border border-gray-200 md:rounded-lg bg-gray-50">
+            <div className="overflow-hidden border border-gray-200 rounded-lg bg-gray-50">
               <table className="min-w-full divide-y divide-gray-200">
                 {/* Candidate Data Table Header */}
                 <thead>
