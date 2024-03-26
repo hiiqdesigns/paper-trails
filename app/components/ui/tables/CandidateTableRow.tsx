@@ -109,51 +109,81 @@ export default async function CandidateTableRow({
 
       <td className="px-4 py-4 text-sm whitespace-nowrap">
         <div className="flex items-center gap-x-2 child-hover:scale-105">
-          <Link href={`tel:${phone}`}>
-            <button className="px-3 py-1 text-xs text-[#D00037] rounded-full bg-[#D00037]/10">
-              Phone
-            </button>
-          </Link>
+          {phone && (
+            <Link href={`tel:${phone}`}>
+              <button className="px-3 py-1 text-xs text-[#D00037] rounded-full bg-[#D00037]/10">
+                Phone
+              </button>
+            </Link>
+          )}
 
-          <Link href={`${webform}`} target="_blank">
-            <button className="px-3 py-1 text-xs text-[#0048A0] rounded-full bg-[#0048A0]/10">
-              Contact Form
-            </button>
-          </Link>
+          {webform && (
+            <Link href={`${webform}`} target="_blank">
+              <button className="px-3 py-1 text-xs text-[#0048A0] rounded-full bg-[#0048A0]/10">
+                Contact Form
+              </button>
+            </Link>
+          )}
 
-          <Link href={`${website}`} target="_blank">
-            <button className="px-3 py-1 text-xs text-[#68246C] rounded-full bg-[#68246C]/10">
-              Website
-            </button>
-          </Link>
+          {website && (
+            <Link href={`${website}`} target="_blank">
+              <button className="px-3 py-1 text-xs text-[#68246C] rounded-full bg-[#68246C]/10">
+                Website
+              </button>
+            </Link>
+          )}
         </div>
       </td>
 
       <td className="px-4 py-4 text-sm whitespace-nowrap">
-        <div className="flex items-center gap-x-6 child-hover:scale-125">
-          <Link
-            href={`https://twitter.com/${twitter_id}`}
-            target="_blank"
-            className="focus:outline-none"
-          >
-            <Image src={twitter} alt="" width={40} height={40} />
-          </Link>
+        <div className="flex items-center gap-x-4 child-hover:scale-125">
+          {twitter_id && (
+            <Link
+              href={`https://twitter.com/${twitter_id}`}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={twitter}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
 
-          <Link
-            href={youtube_url}
-            target="_blank"
-            className="focus:outline-none"
-          >
-            <Image src={youtube} alt="" width={40} height={40} />
-          </Link>
+          {youtube_url && (
+            <Link
+              href={youtube_url}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={youtube}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
 
-          <Link
-            href={`https://www.facebook.com/${facebook_id}`}
-            target="_blank"
-            className="focus:outline-none"
-          >
-            <Image src={facebook} alt="" width={40} height={40} />
-          </Link>
+          {facebook_id && (
+            <Link
+              href={`https://www.facebook.com/${facebook_id}`}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={facebook}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
         </div>
       </td>
     </tr>
