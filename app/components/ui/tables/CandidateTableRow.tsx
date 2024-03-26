@@ -54,9 +54,9 @@ export default async function CandidateTableRow({
         <div className="inline-flex items-center gap-x-3">
           <div className="flex items-center gap-x-2">
             <Image
-              width={120}
-              height={120}
-              className="object-cover w-16 h-16 rounded-full"
+              width={80}
+              height={80}
+              className="object-cover max-w-[80px] max-h-[80px] rounded-full"
               src={
                 image.ok
                   ? imageLink
@@ -69,7 +69,9 @@ export default async function CandidateTableRow({
               alt=""
             />
             <div className="flex flex-col">
-              <h2 className="font-medium text-gray-800">{firstlast}</h2>
+              <h2 className="text-base font-medium text-gray-800">
+                {firstlast}
+              </h2>
 
               <span className="text-sm font-normal text-gray-600">
                 {party == "D"
