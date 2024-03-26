@@ -10,7 +10,6 @@ import redUserIcon from "/public/red-user-icon.png";
 import userIcon from "/public/user-icon.png";
 
 export default async function CandidateTableRow({
-  stateId,
   cid,
   firstlast,
   phone,
@@ -20,7 +19,6 @@ export default async function CandidateTableRow({
   youtube_url,
   facebook_id,
 }: {
-  stateId: string;
   cid: string;
   firstlast: string;
   phone: string;
