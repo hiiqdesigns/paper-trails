@@ -7,17 +7,10 @@ export default function Home() {
         <div className="mx-auto text-center">
           <div className="max-w-lg mx-auto">
             <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">
-              Building Your Next App with our Awesome components
+              Choose Your Government By Following The Money
             </h1>
             <p className="mt-6 text-gray-500">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-              similique obcaecati illum mollitia.
-            </p>
-            <button className="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none">
-              Start 14-Day free trial
-            </button>
-            <p className="mt-3 text-sm text-gray-400 ">
-              No credit card required
+              {`It's not enough for our elected officials to tell us how they can help us. They also need to put their money where their mouth is! Learn more by clicking your state below and see if your representatives' values stack up to their wallets.`}
             </p>
           </div>
 
