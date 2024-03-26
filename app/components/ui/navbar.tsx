@@ -25,7 +25,7 @@ export const Navbar = () => {
           </Link>
 
           {/* <!-- Mobile menu button --> */}
-          <div className="flex md:hidden">
+          {/* <div className="flex md:hidden">
             <button
               type="button"
               className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -62,7 +62,7 @@ export const Navbar = () => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
