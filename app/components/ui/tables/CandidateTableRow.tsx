@@ -43,7 +43,15 @@ export default async function CandidateTableRow({
   const image = await fetch(imageLink);
 
   return (
-    <tr>
+    <tr
+      className={`bg-white hover:bg-gradient-to-r hover:to-70% ${
+        party == "D"
+          ? "hover:from-[#0048A0]/20"
+          : party == "R"
+          ? "hover:from-[#D00037]/20"
+          : "hover:from-[#68246C]/20"
+      }`}
+    >
       <td className="pl-4 pr-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
         <div className="inline-flex items-center gap-x-3">
           <div className="flex items-center gap-x-2">
@@ -62,13 +70,20 @@ export default async function CandidateTableRow({
               }
               alt=""
             />
-
-            <div>
+            <div className="flex flex-col">
               <h2 className="font-medium text-gray-800">{firstlast}</h2>
 
-              <Link href={source} target="_blank">
-                <span className="text-sm font-normal text-gray-600">
-                  See More...
+              <span className="text-sm font-normal text-gray-600">
+                {party == "D"
+                  ? "Democrat"
+                  : party == "R"
+                  ? "Republican"
+                  : "Other"}
+              </span>
+
+              <Link href={source} target="_blank" className="">
+                <span className="text-sm font-normal text-gray-600 underline underline-offset-4">
+                  {"See More >"}
                 </span>
               </Link>
             </div>
@@ -78,7 +93,7 @@ export default async function CandidateTableRow({
 
       <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
         <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60">
-          <h2 className="text-sm font-normal text-emerald-500">
+          <h2 className="text-sm font-normal text-emerald-800">
             {chamber == "H" || chamber == ""
               ? "House of Representatives"
               : chamber == "S"
