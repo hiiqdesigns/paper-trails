@@ -66,7 +66,7 @@ export const Navbar = () => {
         </div>
 
         {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
-        <div
+        {/* <div
           className={`${
             isOpen
               ? "translate-x-[0%] opacity-100 "
@@ -119,7 +119,7 @@ export const Navbar = () => {
               placeholder="Search"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
