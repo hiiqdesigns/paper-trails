@@ -3,7 +3,7 @@ import { USMap } from "./components/US-Map";
 export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen">
-      <section className="container px-8 py-16 md:py-32">
+      <section className="container px-8 py-16 md:py-20">
         <div className="mx-auto text-center">
           <div className="max-w-lg mx-auto">
             <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">
