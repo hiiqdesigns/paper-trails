@@ -42,7 +42,7 @@ export default async function CandidateTableRow({
 
   return (
     <tr
-      className={`bg-white hover:bg-gradient-to-r hover:to-70% ${
+      className={`flex items-center w-full bg-white hover:bg-gradient-to-r hover:to-70% ${
         party == "D"
           ? "hover:from-[#0048A0]/20"
           : party == "R"
@@ -50,82 +50,78 @@ export default async function CandidateTableRow({
           : "hover:from-[#68246C]/20"
       }`}
     >
-      <td className="pl-4 pr-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-        <div className="inline-flex items-center gap-x-3">
-          <div className="flex items-center gap-x-2">
-            <Image
-              width={80}
-              height={80}
-              className="object-cover max-w-[80px] max-h-[80px] rounded-full"
-              src={
-                image.ok
-                  ? imageLink
-                  : party == "D"
-                  ? blueUserIcon
-                  : party == "R"
-                  ? redUserIcon
-                  : userIcon
-              }
-              alt=""
-            />
-            <div className="flex flex-col">
-              <h2 className="text-base font-medium text-gray-800">
-                {firstlast}
-              </h2>
+      <td className="w-1/5 px-4 py-4 text-sm font-medium text-gray-700">
+        <div className="flex items-center gap-x-2">
+          <Image
+            width={80}
+            height={80}
+            className="object-cover max-w-[80px] max-h-[80px] rounded-full"
+            src={
+              image.ok
+                ? imageLink
+                : party == "D"
+                ? blueUserIcon
+                : party == "R"
+                ? redUserIcon
+                : userIcon
+            }
+            alt=""
+          />
+          <div className="flex flex-col">
+            <h2 className="text-base font-medium text-gray-800">{firstlast}</h2>
 
-              <span className="text-sm font-normal text-gray-600">
-                {party == "D"
-                  ? "Democrat"
-                  : party == "R"
-                  ? "Republican"
-                  : "Other"}
-              </span>
+            <span className="text-sm font-normal text-gray-600">
+              {party == "D"
+                ? "Democrat"
+                : party == "R"
+                ? "Republican"
+                : "Other"}
+            </span>
 
-              <Link
-                href={source}
-                target="_blank"
-                className="group/candLink flex gap-1 items-center h-6 mt-1"
-              >
-                <div className="flex flex-col">
-                  <span className="text-sm font-normal leading-none text-gray-600">
-                    See More
-                  </span>
-                  <div className="h-[0.094rem] bg-black rounded-full w-0 group-hover/candLink:w-full transition-[width] duration-500"></div>
+            <Link
+              href={source}
+              target="_blank"
+              className="group/candLink flex gap-1 items-center h-6 mt-1"
+            >
+              <div className="flex flex-col">
+                <span className="text-sm font-normal leading-none text-gray-600">
+                  See More
+                </span>
+                <div className="h-[0.094rem] bg-black rounded-full w-0 group-hover/candLink:w-full transition-[width] duration-500"></div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="w-[0.75rem]">
+                  <div className="bg-black h-[0.09rem] rounded-full w-0 group-hover/candLink:w-[0.75rem] transition-[width] duration-700"></div>
                 </div>
-
-                <div className="flex items-center">
-                  <div className="w-[0.75rem]">
-                    <div className="bg-black h-[0.09rem] rounded-full w-0 group-hover/candLink:w-[0.75rem] transition-[width] duration-700"></div>
-                  </div>
-                  <div className="-ml-[0.5rem] w-[0.5rem] h-[0.5rem] -rotate-45 border-r-[0.09rem] border-b-[0.09rem] border-black"></div>
-                </div>
-              </Link>
-            </div>
+                <div className="-ml-[0.5rem] w-[0.5rem] h-[0.5rem] -rotate-45 border-r-[0.09rem] border-b-[0.09rem] border-black"></div>
+              </div>
+            </Link>
           </div>
         </div>
       </td>
 
-      <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-        <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60">
-          <h2 className="text-sm font-normal text-emerald-800">
+      <td className="w-1/5 px-4 py-4">
+        <div className="inline-flex justify-center items-center px-3 py-1 rounded-full bg-emerald-100/60">
+          <span className="text-xs font-normal text-center text-emerald-800">
             {chamber == "H" || chamber == ""
               ? "House of Representatives"
               : chamber == "S"
               ? "Senate"
               : "N/A"}
-          </h2>
+          </span>
         </div>
       </td>
 
-      <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">
-        {USDollar.format(parseFloat(total))}
+      <td className="w-1/5 px-4 py-4 text-sm text-gray-500 whitespace-nowrap">
+        <span>{USDollar.format(parseFloat(total))}</span>
       </td>
 
-      <td className="px-4 py-4 text-sm whitespace-nowrap">
+      <td className="flex justify-between w-2/5 px-4 py-4 text-xs whitespace-nowrap">
         <div className="flex items-center gap-x-2 child-hover:scale-105">
           {phone && (
             <Link href={`tel:${phone}`}>
-              <button className="px-3 py-1 text-xs text-[#D00037] rounded-full bg-[#D00037]/10">
+              <button className="px-3 py-1 text-[#D00037] rounded-full bg-[#D00037]/10">
                 Phone
               </button>
             </Link>
@@ -133,7 +129,7 @@ export default async function CandidateTableRow({
 
           {webform && (
             <Link href={`${webform}`} target="_blank">
-              <button className="px-3 py-1 text-xs text-[#0048A0] rounded-full bg-[#0048A0]/10">
+              <button className="px-3 py-1 text-[#0048A0] rounded-full bg-[#0048A0]/10">
                 Contact Form
               </button>
             </Link>
@@ -141,15 +137,13 @@ export default async function CandidateTableRow({
 
           {website && (
             <Link href={`${website}`} target="_blank">
-              <button className="px-3 py-1 text-xs text-[#68246C] rounded-full bg-[#68246C]/10">
+              <button className="px-3 py-1 text-[#68246C] rounded-full bg-[#68246C]/10">
                 Website
               </button>
             </Link>
           )}
         </div>
-      </td>
 
-      <td className="px-4 py-4 text-sm whitespace-nowrap">
         <div className="flex items-center gap-x-4 child-hover:scale-125">
           {twitter_id && (
             <Link
@@ -200,6 +194,58 @@ export default async function CandidateTableRow({
           )}
         </div>
       </td>
+
+      {/* <td className="px-4 py-4 text-sm whitespace-nowrap">
+        <div className="flex items-center gap-x-4 child-hover:scale-125">
+          {twitter_id && (
+            <Link
+              href={`https://twitter.com/${twitter_id}`}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={twitter}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
+
+          {youtube_url && (
+            <Link
+              href={youtube_url}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={youtube}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
+
+          {facebook_id && (
+            <Link
+              href={`https://www.facebook.com/${facebook_id}`}
+              target="_blank"
+              className="focus:outline-none"
+            >
+              <Image
+                src={facebook}
+                alt=""
+                width={40}
+                height={40}
+                className="max-w-[40px] max-h-[40px]"
+              />
+            </Link>
+          )}
+        </div>
+      </td> */}
     </tr>
   );
 }
