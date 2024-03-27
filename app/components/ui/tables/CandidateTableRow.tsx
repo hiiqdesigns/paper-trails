@@ -81,10 +81,24 @@ export default async function CandidateTableRow({
                   : "Other"}
               </span>
 
-              <Link href={source} target="_blank" className="">
-                <span className="text-sm font-normal text-gray-600 underline underline-offset-4">
-                  {"See More >"}
-                </span>
+              <Link
+                href={source}
+                target="_blank"
+                className="group/candLink flex gap-1 items-center h-6 mt-1"
+              >
+                <div className="flex flex-col">
+                  <span className="text-sm font-normal leading-none text-gray-600">
+                    See More
+                  </span>
+                  <div className="h-[0.094rem] bg-black rounded-full w-0 group-hover/candLink:w-full transition-[width] duration-500"></div>
+                </div>
+
+                <div className="flex items-center">
+                  <div className="w-[0.75rem]">
+                    <div className="bg-black h-[0.09rem] rounded-full w-0 group-hover/candLink:w-[0.75rem] transition-[width] duration-700"></div>
+                  </div>
+                  <div className="-ml-[0.5rem] w-[0.5rem] h-[0.5rem] -rotate-45 border-r-[0.09rem] border-b-[0.09rem] border-black"></div>
+                </div>
               </Link>
             </div>
           </div>
