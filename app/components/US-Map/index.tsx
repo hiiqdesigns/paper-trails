@@ -7,7 +7,11 @@ export const USMap = () => {
   const router = useRouter();
 
   return (
-    <svg viewBox="0 0 1386 822" id="us-map">
+    <svg
+      viewBox="0 0 1386 822"
+      id="us-map"
+      className="h-[180px] sm:h-[336px] md:h-[412px] lg:h-[564px] xl:h-[822px]"
+    >
       {stateList.map((state) => {
         const hoverColor = classNames({
           "hover:fill-[#D00037]": state.stateControl == "Rep",
