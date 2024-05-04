@@ -15,13 +15,11 @@ export default async function State({
   const currentState = stateList.find((state) => state.id.toLowerCase() == id);
 
   return (
-    <main className="flex flex-col items-center min-h-screen">
-      <section className="container px-8 py-6 md:py-12">
-        <CandidateTable
-          stateName={currentState?.name}
-          stateList={legislatorsList}
-        />
-      </section>
-    </main>
+    <>
+      <CandidateTable
+        stateName={currentState?.name}
+        legislatorList={legislatorsList}
+      />
+    </>
   );
 }
