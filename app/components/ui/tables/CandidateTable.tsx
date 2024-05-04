@@ -2,10 +2,10 @@ import CandidateTableRow from "./CandidateTableRow";
 
 export default function CandidateTable({
   stateName,
-  stateList,
+  legislatorList,
 }: {
   stateName: string | undefined;
-  stateList: Array<any>;
+  legislatorList: Array<any>;
 }) {
   return (
     <div>
@@ -13,7 +13,7 @@ export default function CandidateTable({
         <h2 className="text-lg font-medium text-gray-800">{stateName}</h2>
 
         <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full">
-          {stateList.length} Representatives
+          {legislatorList.length} Representatives
         </span>
       </div>
 
@@ -57,8 +57,8 @@ export default function CandidateTable({
 
                 {/* Candidate Data Table */}
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {stateList &&
-                    stateList.map((candidate) => {
+                  {legislatorList.length !== 0 ? (
+                    legislatorList.map((candidate) => {
                       const candLegisData = candidate["@attributes"];
 
                       return (
@@ -67,7 +67,15 @@ export default function CandidateTable({
                           {...candLegisData}
                         />
                       );
-                    })}
+                    })
+                  ) : (
+                    <div className="min-h-full h-[60vh] flex gap-1 items-center justify-center">
+                      <span className="mr-2">Loading Legislators</span>
+                      <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                      <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                      <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                    </div>
+                  )}
                 </tbody>
               </table>
             </div>
